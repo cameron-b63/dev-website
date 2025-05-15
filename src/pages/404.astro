@@ -1,0 +1,11 @@
+---
+import TerminalLayout from "../layouts/TerminalLayout.astro";
+import { PREFIX } from "../constants"
+---
+
+<TerminalLayout>
+    <div>
+        <div><span class="prompt">{PREFIX}</span>:~$ <span class="command">cd /nonexistent</span></div>
+        <div><span class="command">bash: cd: </span>/nonexistent: No such file or directory</div>
+    </div>
+</TerminalLayout>

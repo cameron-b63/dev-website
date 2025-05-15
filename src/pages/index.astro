@@ -1,11 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TerminalLayout from '../layouts/TerminalLayout.astro';
+import { PREFIX } from '../constants';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<TerminalLayout title="Cameron Bond">
+	<div>
+		<div class="terminal-line"><span class="prompt">{PREFIX}</span>:~$
+		<span class="command">ls</span></div>
+		<pre class="ls-output">
+<a href="/info">info	</a><a href="/projects">projects</a>
+		</pre>
+		<div><span class="prompt">{PREFIX}</span>:~$ <span class="command">ls</span> ./projects</div>
+		<pre class="ls-output">
+<a href="/mips">NAME</a>
+		</pre>
+		<div><span class="prompt">{PREFIX}</span>:~$ <span class="cursor">█</span></div>
+	</div>
+</TerminalLayout>

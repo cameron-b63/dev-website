@@ -1,0 +1,64 @@
+:root {
+    --bg: #111;
+    --fg: #eee;
+    --accent: #3dfc89;
+    --directory: #508ca4;
+    --alt-accent: #e76d83;
+    --mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--mono);
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 2rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.prompt {
+    color: var(--accent);
+}
+
+.command {
+    font-weight: bold;
+}
+
+.directory {
+    color: var(--directory);
+    font-weight: bold;
+}
+
+.ls-output {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 4ch;
+    display: inline-block;
+    min-width: 20ch;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s steps(1) infinite;
+    vertical-align: baseline;
+    font-family: var(--mono);
+    font-size: 1em;
+    line-height: 1;
+    vertical-align: middle;
+    color: var(--fg);
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    50.01%, 100% {
+        opacity: 0;
+    }
+}
